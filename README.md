@@ -226,6 +226,7 @@ with the following parameters and values.
 | enable | 0,1 | The Face Detection Switch. 0-Off,1-On |
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
+
 #7.1 
 
 **Example**：
