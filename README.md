@@ -219,7 +219,7 @@ OK\r\n
 ```http
 http://<server ipaddr>/cgi-bin/faceparameter_cgi?action=<value>[&<parameter>=<value>…]
 ```
-*with the following parameters and values.*
+with the following parameters and values.
 
 | **Parameter** | Value     | Description                              |
 | ------------- | --------- | ---------------------------------------- |
