@@ -9,7 +9,7 @@
 | ------- | ------ | ---------- | ----------------------------- |
 | v0.1    | Qi Yao | 2018/04/11 | Create cgis document          |
 | v0.2    | Qi Yao | 2018/04/20 | Update the IR mode parameters |
-
+| v0.3    |Jian Zhu | 2018/05/09 | Update the OSD Settings,Basic CTB and Face Parameters |
 
 
 ##  Introduction
