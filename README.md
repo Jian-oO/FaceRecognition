@@ -230,7 +230,10 @@ with the following parameters and values.
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
+
+
 ###7.1   Get face parameters
+
 
 **Example**：
 
@@ -247,7 +250,9 @@ Content-Type:text/plain\r\n
 OK\r\n
 ```
 
+
 #7.2  Face detection switch
+
 
 **Example**：
 
