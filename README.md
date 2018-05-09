@@ -6,7 +6,7 @@
 | ------- | ------ | ---------- | ----------------------------- |
 | v0.1    | Qi Yao | 2018/04/11 | Create cgis document          |
 | v0.2    | Qi Yao | 2018/04/20 | Update the IR mode parameters |
-| v0.3    |Jian Zhu | 2018/05/09 | Update the OSD Settings,Basic CTB and Face Parameters |
+| v0.3    |Jian Zhu | 2018/05/09 | Update the Basic CTB,OSD Settings and Face Parameters |
 
 
 
@@ -146,8 +146,36 @@ Content-Type:text/plain\r\n
 \r\n
 OK\r\n
 ```
+## 5. Basic CTB
 
-## 5. OSD Settings
+**Syntax**
+
+```http
+http://<server ipaddr>/cgi-bin/camerasetting_cgi?action=set&ColorToBlack=Color[&<parameter>=<value>…]
+```
+
+| **Parameter** | Value     | Description                              |
+| ------------- | --------- | ---------------------------------------- |
+| ColorToBlack   | Color<br />Auto<br />Black | ColorToBlack=Color<br />ColorToBlack=Auto<br />ColorToBlack=Black |
+| user          | SnApAdm1n | user name                                |
+| pwd           | XXXXXXXX  | password                                 |
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/camerasetting_cgi?action=set&ColorToBlack=Color&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+## 6. OSD Settings
 
 **Syntax**
 
