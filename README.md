@@ -226,13 +226,22 @@ with the following parameters and values.
 | action   | get, set  | get = get Face parameters.<br />set = set Face parameters. |
 | enable | 0,1 | the face detection switch. 0-Off,1-On |
 | sensitivity | 0~10 | capture sensitivity |
+| snapMode | 0~4 | 0: Snap after leaving<br /> 1: Real-time snap<br />2: real time and Snap afte leaving(In seconds)<br />3: real time and Snap afte leaving(Farme as a unit)<br />4: A single mode |
+| beatTime | 1~3 | Valid when setting snapMode=0 |
+| TrackFrameNum | 1~1500 | Valid when setting snapMode=1 |
+| IntervalTime | 1~30 | Valid when setting snapMode=2 |
+| IntervalFrame | 1~1500 | Valid when setting snapMode=3 |
+| GateIntervalFrame | 1~1500 | Valid when setting snapMode=4 |
+| ------------- | --------- | ---------------------------------------- |
+| ------------- | --------- | ---------------------------------------- |
 | ------------- | --------- | ---------------------------------------- |
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
 
 
-# 7.1   Get face parameters
+### 7.1   Get face parameters
+
 
 
 **Example**：
@@ -250,9 +259,7 @@ Content-Type:text/plain\r\n
 OK\r\n
 ```
 
-
-# 7.2  Face detection switch
-
+### 7.2  Face detection switch
 
 **Example**：
 
@@ -269,12 +276,104 @@ Content-Type:text/plain\r\n
 OK\r\n
 ```
 
-# 7.3  Capture sensitivity
+### 7.3  Capture sensitivity
 
 **Example**：
 
 ```http
 http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&sensitivity=4&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+### 7.4  SnapMode
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=0&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#### 7.4.1  beatTime(snapMode=0)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=0&beatTime=3&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#### 7.4.2  TrackFrameNum(snapMode=1)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=1&TrackFrameNum=25&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#### 7.4.3  IntervalTime(snapMode=2)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=2&IntervalTime=3&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#### 7.4.4  IntervalFrame(snapMode=3)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=3&IntervalFrame=30&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#### 7.4.4  GateIntervalFrame(snapMode=4)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=4&GateIntervalFrame=30&user=SnApAdm1n&pwd=DXLFYELRCBDB
 ```
 
 **Response**
