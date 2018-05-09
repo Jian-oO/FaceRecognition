@@ -211,3 +211,34 @@ Content-Type:text/plain\r\n
 \r\n
 OK\r\n
 ```
+
+## 7. Face Parameters
+
+**Syntax**
+
+```http
+http://<server ipaddr>/cgi-bin/faceparameter_cgi?action=<value>[&<parameter>=<value>…]
+```
+with the following parameters and values.
+| **Parameter** | Value     | Description                              |
+| ------------- | --------- | ---------------------------------------- |
+| action   | get, set  | get = get Face parameters.<br />set = set Face parameters. |
+| enable | 0,1 | The Face Detection Switch. 0-Off,1-On |
+| user          | SnApAdm1n | user name                                |
+| pwd           | XXXXXXXX  | password                                 |
+#7.1 
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&enable=0&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
