@@ -240,7 +240,7 @@ with the following parameters and values.
 | Trackmode | 0,1 | 0:Off<br />1:On,This parameter is used to display the face tracking box |
 | PicMode | 0~2 | 0:Face Pictu<br />1:Original Pictu<br />2:Face and Original Pictu |
 | PicPrefixEnable | 0,1 | 0:default<br />1: customize,Composed of letters and Numbers, 1 ~ 15 characters, case sensitive|
-| PicPrefix | <value> | Valid when setting PicPrefixEnable=1,PicPrefix=<value>(Composed of letters and Numbers, 1 ~ 15 characters, case sensitive) |
+| PicPrefix | \<value> | Valid when setting PicPrefixEnable=1<br />PicPrefix=\<value>(Composed of letters and Numbers, 1 ~ 15 characters, case sensitive) |
 | ResetFaceParam | 1 | Reset face param,restore defaults |
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
