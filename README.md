@@ -224,16 +224,52 @@ with the following parameters and values.
 | **Parameter** | Value     | Description                              |
 | ------------- | --------- | ---------------------------------------- |
 | action   | get, set  | get = get Face parameters.<br />set = set Face parameters. |
-| enable | 0,1 | The Face Detection Switch. 0-Off,1-On |
+| enable | 0,1 | the face detection switch. 0-Off,1-On |
+| sensitivity | 0~10 | capture sensitivity |
+| ------------- | --------- | ---------------------------------------- |
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
-##7.1 
+#7.1   Get face parameters
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=get&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#7.2  Face detection switch
 
 **Example**：
 
 ```http
 http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&enable=0&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+#7.3  Capture sensitivity
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&sensitivity=4&user=SnApAdm1n&pwd=DXLFYELRCBDB
 ```
 
 **Response**
