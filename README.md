@@ -1,6 +1,3 @@
-# FaceRecognition
-人脸识别活体检测
-
 # CGIs list for JVT face camera
 
 ## History
@@ -10,6 +7,7 @@
 | v0.1    | Qi Yao | 2018/04/11 | Create cgis document          |
 | v0.2    | Qi Yao | 2018/04/20 | Update the IR mode parameters |
 | v0.3    |Jian Zhu | 2018/05/09 | Update the OSD Settings,Basic CTB and Face Parameters |
+
 
 
 ##  Introduction
@@ -149,5 +147,39 @@ Content-Type:text/plain\r\n
 OK\r\n
 ```
 
+## 5. OSD Settings
 
+**Syntax**
 
+```http
+http://<server ipaddr>/cgi-bin/textoverlay_cgi?action=set&channel=<value>[&<parameter>=<value>…]
+```
+
+| **Parameter** | Value     | Description                              |
+| ------------- | --------- | ---------------------------------------- |
+| action   | get, set  | get = get the text overlay options.<br />set = set the text overlay options. |
+| channel | 0~3 | The channel number of the video. |
+| user          | SnApAdm1n | user name                                |
+| pwd           | XXXXXXXX  | password                                 |
+| Title | <string> | Valid characters are a thru z, A thru Z and 0 thru 9. |
+| WeekValue | 0,1 | Whether to display the week, 0 - Do not show, 1 – Show. |
+| TimeValue | 0,1 | Whether to display the time, 0 - Do not show, 1 – Show. |
+| DateValue | 0,1 | Whether to display the date, 0 - Do not show, 1 – Show. |
+| BitrateValue | 0,1 | Whether to display the bitrate, 0 - Do not show, 1 – Show. |
+| TitleValue | 0,1 | Whether to display the title, 0 - Do not show, 1 – Show. |
+| Color | 0~4 | The color of the font, 0-white, 1-black, 2-yellow, 3-red, 4-blue. |
+
+**Example**：
+
+```http
+http://192.168.55.88/cgi-bin/textoverlay_cgi?action=set&channel=0&user=SnApAdm1n&pwd=DXLFYELRCBDB&Title=ipc&WeekValue=0&TimeValue=0&DateValue=0&TitleValue=0&BitrateValue=0
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
