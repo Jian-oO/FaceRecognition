@@ -232,7 +232,7 @@ with the following parameters and values.
 
 
 
-###7.1   Get face parameters
+# 7.1   Get face parameters
 
 
 **Example**：
@@ -251,7 +251,7 @@ OK\r\n
 ```
 
 
-\#7.2  Face detection switch
+# 7.2  Face detection switch
 
 
 **Example**：
@@ -269,7 +269,7 @@ Content-Type:text/plain\r\n
 OK\r\n
 ```
 
-#7.3  Capture sensitivity
+# 7.3  Capture sensitivity
 
 **Example**：
 
