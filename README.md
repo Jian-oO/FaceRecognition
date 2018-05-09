@@ -251,7 +251,7 @@ OK\r\n
 ```
 
 
-#7.2  Face detection switch
+\#7.2  Face detection switch
 
 
 **Example**：
