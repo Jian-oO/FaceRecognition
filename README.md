@@ -230,7 +230,7 @@ with the following parameters and values.
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
-#7.1   Get face parameters
+###7.1   Get face parameters
 
 **Example**：
 
