@@ -219,7 +219,8 @@ OK\r\n
 ```http
 http://<server ipaddr>/cgi-bin/faceparameter_cgi?action=<value>[&<parameter>=<value>…]
 ```
-with the following parameters and values.
+*with the following parameters and values.*
+
 | **Parameter** | Value     | Description                              |
 | ------------- | --------- | ---------------------------------------- |
 | action   | get, set  | get = get Face parameters.<br />set = set Face parameters. |
@@ -227,7 +228,7 @@ with the following parameters and values.
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
-#7.1 
+##7.1 
 
 **Example**：
 
