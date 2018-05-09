@@ -225,16 +225,16 @@ with the following parameters and values.
 | ------------- | --------- | ---------------------------------------- |
 | action   | get, set  | get = get Face parameters.<br />set = set Face parameters. |
 | enable | 0,1 | the face detection switch. 0-Off,1-On |
-| sensitivity | 0~10 | capture sensitivity |
+| sensitivity | 0~10 | Default sensitivity is 4<br />The higher the sensitivity, the worse the quality of the captured pictures.<br /> The lower the sensitivity, the higher the quality of the captured picture. |
 | snapMode | 0~4 | 0: Snap after leaving<br /> 1: Real-time snap<br />2: real time and Snap afte leaving(In seconds)<br />3: real time and Snap afte leaving(Farme as a unit)<br />4: A single mode |
-| beatTime | 1~3 | Valid when setting snapMode=0 |
+| beatTime | 1~3 | Valid when setting snapMode=0,Defaults to 1 times<br />Description: From the time people enter and leave the screen, according to the maximum number of snap shots, select the best snapshot of the face to upload FTP server. Only faces will leave the screen to upload pictures, if the face has stayed in the picture, will not upload pictures |
 | TrackFrameNum | 1~1500 | Valid when setting snapMode=1 |
 | IntervalTime | 1~30 | Valid when setting snapMode=2 |
 | IntervalFrame | 1~1500 | Valid when setting snapMode=3 |
 | GateIntervalFrame | 1~1500 | Valid when setting snapMode=4 |
-| ------------- | --------- | ---------------------------------------- |
-| ------------- | --------- | ---------------------------------------- |
-| ------------- | --------- | ---------------------------------------- |
+| faceMinPixel | 30~300 | ---------------------------------------- |
+| expansionCoeff | 0~10 | Expansion coefficient |
+| faceScene | 0,1 | 0: Conventional scene<br />1: Lobby scene |
 | user          | SnApAdm1n | user name                                |
 | pwd           | XXXXXXXX  | password                                 |
 
@@ -371,6 +371,21 @@ OK\r\n
 ```
 
 #### 7.4.4  GateIntervalFrame(snapMode=4)
+
+```http
+http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=4&GateIntervalFrame=30&user=SnApAdm1n&pwd=DXLFYELRCBDB
+```
+
+**Response**
+
+```http
+HTTP/1.0 200 OK\r\n
+Content-Type:text/plain\r\n
+\r\n
+OK\r\n
+```
+
+### 7.5  faceMinPixel
 
 ```http
 http://192.168.55.88/cgi-bin/faceparameter_cgi?action=set&snapMode=4&GateIntervalFrame=30&user=SnApAdm1n&pwd=DXLFYELRCBDB
