@@ -151,7 +151,7 @@ OK\r\n
 **Syntax**
 
 ```http
-http://<server ipaddr>/cgi-bin/camerasetting_cgi?action=set&ColorToBlack=Color[&<parameter>=<value>…]
+http://<server ipaddr>/cgi-bin/camerasetting_cgi?action=set&ColorToBlack=<value>[&<parameter>=<value>…]
 ```
 
 | **Parameter** | Value     | Description                              |
